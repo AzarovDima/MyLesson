@@ -4,9 +4,9 @@
 Console.Write("Введите имя пользователя: ");
 string username = Console.ReadLine();
 
-if (username == "Дима")
+if (username.ToLower() == "дима")
 {
-    Console.WriteLine("Ура, это же Дима!!! ");
+    Console.WriteLine("Ура, это же ДИМА!!! ");
 }
 else
 {
