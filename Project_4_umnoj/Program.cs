@@ -1,3 +1,9 @@
-﻿double numberA = 21;
-double numberB=5;
+﻿// Найдем частное
+
+double numberA = new Random().Next(1, 20);
+Console.WriteLine(numberA);
+
+double numberB = new Random().Next(1, 20);
+Console.WriteLine(numberB);
+
 Console.WriteLine(numberA / numberB);
