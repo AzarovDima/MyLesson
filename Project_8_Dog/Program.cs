@@ -4,26 +4,25 @@ int count = 0;
 int distanse = 10000;
 int firstFrendSpeed = 1;
 int secondFrendSpeed = 2;
-int dogSped = 4;
-int friend = 1;
-friend == 2;
+int dogSped = 5;
+int friend = 2;
+int time = 0;
 
-while (distanse > 5)
+while (distanse > 10)
 {
     if (friend == 1)
     {
-        t = distanse / (firstFrendSpeed + dogSped);
-        friend == 2;
+        time = distanse / (firstFrendSpeed + dogSped);
+        friend = 2;
+        distanse = distanse - (firstFrendSpeed + secondFrendSpeed) * time;
+        count++;
     }
-    else (friend = 2);
+    else if (friend == 2)
     {
-        t = distanse / (secondFrendSpeed + dogSped);
-        friend == 1;
+        time = distanse / (secondFrendSpeed + dogSped);
+        friend = 1;
+        distanse = distanse - (firstFrendSpeed + secondFrendSpeed) * time;
+        count++;
     }
-    distanse = distanse - (firstFrendSpeed + secondFrendSpeed) * t;
-    count++;
 }
-Console.WriteLine(count);
-
-
-
+Console.WriteLine($"Собака пробежит {count} раз");
