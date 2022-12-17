@@ -1,8 +1,8 @@
-﻿int a = 3;
-int b = 8;
-int c = 1;
-int d = 4;
-int e = 6;
+﻿int a = 5;
+int b = 34;
+int c = 21;
+int d = 42;
+int e = 46;
 
 int max = a;
 
@@ -12,5 +12,4 @@ if (c > max) max = c;
 if (d > max) max = d;
 if (e > max) max = e;
 
-Console.Write("max= ");
-Console.WriteLine(max);
+Console.Write($"Максимальное число равняется {max}");
