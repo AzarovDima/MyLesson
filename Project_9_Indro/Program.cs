@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Нахождение максимальных из кучи чисел
 
 int Max(int arg1, int arg2, int arg3)
 {
