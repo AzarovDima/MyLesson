@@ -1,5 +1,7 @@
 ﻿// Углубляем изучать написание консоли С+
 
-Console.WriteLine("Введите ваше имя!!! ");
-string username = Console.ReadLine();
-Console.Write($"Привет {username}");
+Console.Write("Введите ваше имя: ");
+string username = Console.ReadLine() ?? "";
+int user = int.Parse(username);
+
+Console.Write($"Привет {user}");
