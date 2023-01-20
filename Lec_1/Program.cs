@@ -1,3 +1,4 @@
 ﻿// Знакомство с С+
 
-Console.WriteLine("Это я привет МИР ");
+Console.Clear();
+Console.WriteLine("Это сново я!!111 ");

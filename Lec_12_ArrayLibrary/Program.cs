@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-void FillArray(int[] collection)
+﻿void FillArray(int[] collection)
 {
     int length = collection.Length;
     int index = 0;
