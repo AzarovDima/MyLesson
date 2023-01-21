@@ -11,24 +11,24 @@ Console.WriteLine($"[{String.Join(", ", array)}]");
 Console.WriteLine($"Сумма положительных чисел массива: {sumPositives} ");
 Console.WriteLine($"Сумма отрицательных чисел массива: {sumNegatives} ");
 
-int GetSumNegatives(int[] array)
+int GetSumNegatives(int[] array1)
 {
     int sum = 0;
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array1.Length; i++)
     {
-        sum += (array[i] < 0) ? array[i] : 0;
+        sum += (array1[i] < 0) ? array1[i] : 0;
     }
     return sum;
 }
 
-int GetSumPositives(int[] array)
+int GetSumPositives(int[] array2)
 {
     int sum = 0;
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array2.Length; i++)
     {
-        if (array[i] > 0) sum += array[i];
+        if (array2[i] > 0) sum += array2[i];
     }
     return sum;
 }

@@ -28,7 +28,7 @@ if (num_abs < 100)
     return;
 }
 
-int thirdNumberRight = num_abs / 100;
+int thirdNumberRight = num_abs / 100 % 10;
 
 while (num_abs > 999)
 {

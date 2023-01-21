@@ -5,7 +5,7 @@
 
 Console.Write("Выполняется создание массива.. ");
 
-int[] array = GetRandomArray(4, -10, 20);
+int[] array = GetRandomArray(10, -10, 20);
 Console.Write($"[{String.Join(", ", array)}]");
 
 GetChangeNumber(array);
@@ -28,8 +28,7 @@ void GetChangeNumber(int[] array2)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = array[i] * -1;
+        array2[i] = array2[i] * -1;
     }
 
 }
-
