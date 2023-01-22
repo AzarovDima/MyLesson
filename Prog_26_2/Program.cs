@@ -13,7 +13,7 @@ void FillArray(int[] collection)
     {
         while (true)
         {
-            Console.Write($"Введите {count} число: ");
+            Console.Write($"Введите {count + 1} число: ");
             bool isCorrect = int.TryParse(Console.ReadLine(), out int num);
             if (isCorrect)
             {
@@ -22,7 +22,7 @@ void FillArray(int[] collection)
             }
             else Console.Write("Ошибка ввода!! ");
         }
-    count++;
+        count++;
     }
 }
 bool CheckArray(int[] arr)

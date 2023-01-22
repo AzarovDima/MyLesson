@@ -3,11 +3,14 @@
 3  -> 11
 2  -> 10 */
 
-Console.Write(GetNumberFromUser());
+// Console.Write(GetNumberFromUser());
+
+int inPutNumber = GetNumberFromUser();
+string dex = Dex();
+Console.Write($"Число {inPutNumber} равняется {dex} в двоичной системе исчисления");
 
 int GetNumberFromUser()
 {
-
     while (true)
     {
         Console.Write($"Введите чесло: ");
@@ -18,5 +21,18 @@ int GetNumberFromUser()
         }
         else Console.Write("Ошибка ввода!!! ");
     }
+}
+
+string Dex()
+{
+    int num = inPutNumber;
+    string result = String.Empty;
+    if (num == 0) return "0";
+    while (num > 0)
+    {
+        result = (num % 2).ToString() + result;
+        num = num / 2;
+    }
+    return result;
 }
 
