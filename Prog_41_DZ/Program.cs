@@ -2,26 +2,22 @@
 0, 7, 8, -2, -2 -> 2
 -1, -7, 567, 89, 223-> 3 */
 
-/* int[] array = new int[GetNumberFromUser()];
 
-Console.Write(String.Join(" ", array));
-
-int GetNumberFromUser()
+static void Main(string[] args)
 {
-    while (true)
+    int[] numbers = new int[args.Length];
+    int temp;
+    for (int i = 0; i < args.Length; i++)
     {
-        Console.Write($"Введите чесло: ");
-        bool isCorrect = int.TryParse(Console.ReadLine(), out int num);
-        if (isCorrect)
+        if (Int32.TryParse(args[i], out temp))
         {
-            return num;
+            numbers[i] = temp;
         }
-        else Console.Write("Ошибка ввода!!! ");
+        else
+        {
+            numbers[i] = 0;
+        }
     }
-} */
+}
 
-
-int[] array = new int[5];
-for (int i = 0; i < 5; ++i)
-    array[i] = int.Parse(Console.ReadLine());
-Console.Write(String.Join(" ", array));
+int[] array = Main
