@@ -3,21 +3,18 @@
 -1, -7, 567, 89, 223-> 3 */
 
 
-static void Main(string[] args)
+
+
+Console.Write("Введите элементы(через пробел): ");
+
+double[] arr = Array.ConvertAll((Console.ReadLine() ?? "").Split(), double.Parse);
+double count = 0;
+
+for (int i = 0; i < arr.Length; i++)
 {
-    int[] numbers = new int[args.Length];
-    int temp;
-    for (int i = 0; i < args.Length; i++)
+    if (arr[i] > 0)
     {
-        if (Int32.TryParse(args[i], out temp))
-        {
-            numbers[i] = temp;
-        }
-        else
-        {
-            numbers[i] = 0;
-        }
+        count++;
     }
 }
-
-int[] array = Main
+Console.WriteLine($"Кол-во элементов > 0: {count}");
