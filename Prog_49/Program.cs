@@ -17,6 +17,7 @@ Console.Write("Введите количество столбцов массив
 int columns = int.Parse(Console.ReadLine() ?? "");
 int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
+Console.WriteLine();
 
 int[,] GetArray(int m, int n, int minValue, int maxValue1)
 {
@@ -49,17 +50,17 @@ int[,] GetNewArray(int[,] array)
 {
     int[,] newresult = array;
 
-    for (int i = 0; i < array.GetLength; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
 
             if ((i % 2 != 0) & (j % 2 != 0))
             {
-                newresult[i, j] = Math.Pow(newresult[i, j], 2);
+                newresult[i, j] = (int)Math.Pow(newresult[i, j], 2);
             }
         }
     }
     return newresult;
 }
-
+PrintArray(array1);
