@@ -62,3 +62,71 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
+
+
+/* Console.Clear();
+
+int[,] array = FillArray(6, 2, 0, 9);
+PrintArray(array);
+int[,] newArray = ReversArray(array);
+PrintArray(newArray);
+
+
+// Функции, используемые в программе
+int[,] FillArray(int m, int n, int minValue, int maxValue)
+{
+    int[,] inArray = new int[m, n];
+    var rnd = new Random();
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        inArray[i, j] = rnd.Next(minValue, maxValue + 1);
+    }
+    return inArray;
+}
+ */
+/* 
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        Console.Write($"{inArray[i, j]} ");
+        Console.WriteLine();    
+    }
+    
+} */
+
+
+/* Console.Clear();
+
+int[,] array = FillArray(6, 6, 0, 10);
+PrintArray(array);
+CheckArray(array, 0, 10);
+
+
+void CheckArray(int[,] inArray, int minValue, int maxValue)
+{
+    Console.WriteLine();
+    int[] countNumber = new int[maxValue - minValue];
+    for (int x = 0; x < countNumber.Length; x++)
+    {
+        int amount = 0;
+        for (int i = 0; i < inArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < inArray.GetLength(1); j++)
+            {
+                if (inArray[i,j] == x) amount += 1;
+
+            }
+        }
+        countNumber[x] = amount;
+        if (amount != 0)
+        {
+            if (amount % 10 == 2 || amount % 10 == 3 || amount % 10 == 4)
+                Console.WriteLine($"{x} встречается {amount} раза");
+            else
+                Console.WriteLine($"{x} встречается {amount} раз");
+        }
+    }
+} */
