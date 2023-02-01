@@ -31,18 +31,18 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
-int[,] SotrArray(int[,] array)
+int[,] SotrArray(int[,] array) // новый массив сортировочный
 {
     int[,] newresult = new int[array.GetLength(0), array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(1) - 1; k++) // новая переменная, которая будет обходить строку и сортировать
+            for (int k = 0; k < array.GetLength(1) - 1; k++) // новая переменная, которая будет обходить по каждому столбцу вдоль строки
             {
                 if (array[i, k] < array[i, k + 1])
                 {
-                    int temp = array[i, k + 1];
+                    int temp = array[i, k + 1]; //пузырьковая сортировка
                     array[i, k + 1] = array[i, k];
                     array[i, k] = temp;
                 }
